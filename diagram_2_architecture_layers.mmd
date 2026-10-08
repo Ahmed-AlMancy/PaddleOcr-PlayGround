@@ -1,0 +1,37 @@
+flowchart TD
+    subgraph Presentation["Presentation Layer"]
+        CLI["Command Line Interface - run.py"]
+        API["Python Library API - process_receipt"]
+    end
+
+    subgraph Application["Application Use Cases Layer"]
+        UC["ProcessReceiptUseCase - Main Orchestrator"]
+        SP["SpatialLayoutParser - Table Header Recognition"]
+    end
+
+    subgraph Contracts["Contracts Layer Interfaces"]
+        IOCR["IOCREngine Interface"]
+        ILLM["ILLMClient Interface"]
+    end
+
+    subgraph Domain["Domain Layer Core Business Rules"]
+        Models["StructuredReceipt / ReceiptItem / OcrElement"]
+        PP["ReceiptPreprocessor - Digits Price Sanitizer"]
+        VAL["ReceiptValidator - Category Schema Guard"]
+    end
+
+    subgraph Infrastructure["Infrastructure Layer External Tools"]
+        Paddle["PaddleOcrEngine - PP-OCRv5"]
+        Ollama["OllamaLlmClient - qwen2.5:3b"]
+        Loader["JsonOcrLoader - Offline Testing"]
+    end
+
+    CLI --> API
+    API --> UC
+    UC --> SP
+    UC --> IOCR
+    UC --> ILLM
+    UC --> Domain
+    Paddle -. Implements .-> IOCR
+    Ollama -. Implements .-> ILLM
+    Loader -. Implements .-> IOCR
