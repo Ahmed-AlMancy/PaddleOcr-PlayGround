@@ -11,14 +11,11 @@ receipt-test/
 ├── data/                       # Sample data & execution output artifacts
 │   ├── images/                 # Receipt sample images (.jpg, .png)
 │   └── outputs/                # Structured output JSONs & benchmark reports
-├── docs/                       # Architecture diagrams & technical docs
-│   ├── ARCHITECTURE.md         # High-level architecture overview
-│   ├── DOCUMENTATION.md        # File-by-file technical reference
-│   ├── diagrams/
-│   │   ├── README.md           # Diagram index matrix & status guide
-│   │   ├── excalidraw/         # 15 native Excalidraw (.excalidraw) JSON files
-│   │   └── mermaid/            # 15 standalone Mermaid (.mmd) diagram files
-│   └── legacy/                 # Legacy diagram files
+├── docs/                       # System architecture diagrams
+│   └── diagrams/
+│       ├── README.md           # Diagram index matrix & status guide
+│       ├── excalidraw/         # 4 native Excalidraw (.excalidraw) JSON files
+│       └── mermaid/            # 4 standalone Mermaid (.mmd) diagram files
 ├── receipt_processor/          # Core Clean Architecture Python package
 │   ├── contracts/              # Inversion of Control interfaces (IOCREngine, ILLMClient)
 │   ├── domain/                 # Domain entities, models, preprocessors & validators
@@ -37,8 +34,13 @@ receipt-test/
 
 ---
 
-## 📖 Architecture & Diagrams
+## 📖 System Architecture Diagrams
 
-- **High-Level Overview:** See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
-- **Technical Reference:** See [`docs/DOCUMENTATION.md`](docs/DOCUMENTATION.md)
-- **Visual Architecture Diagrams (15 Diagrams):** See [`docs/diagrams/README.md`](docs/diagrams/README.md)
+The project architecture is documented across 4 visual diagrams in both Mermaid (`.mmd`) and Excalidraw (`.excalidraw`) formats:
+
+1. **`01_system_overview`**: High-level conceptual end-to-end processing pipeline.
+2. **`02_detailed_processing_pipeline`**: Complete technical data flow between stages.
+3. **`03_ocr_and_layout`**: Centroid normalization, row/column clustering & reading order.
+4. **`04_receipt_parsing`**: Nullable financial breakdown & spatial line item matching.
+
+See [`docs/diagrams/README.md`](docs/diagrams/README.md) for full diagram links and rendering instructions.
