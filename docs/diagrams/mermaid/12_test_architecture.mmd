@@ -1,0 +1,18 @@
+%% Diagram 12: Automated Test Architecture & Pytest Suite
+%% Status: CURRENT
+flowchart TD
+    PytestRunner[Pytest Test Runner python -m pytest] --> TestSuite[tests/test_pipeline.py]
+
+    subgraph Helpers["Test Data Generators"]
+        TestSuite --> SyntheticGen[create_synthetic_ocr_data helper]
+        SyntheticGen --> SyntheticOCR[Synthetic OcrElement Box Stream]
+    end
+
+    subgraph TestCases["Test Suites (11 Passing Tests)"]
+        TestSuite --> CatTests["1. Category Validation Tests:<br/>- Exact categories<br/>- Case insensitivity<br/>- Invalid fallbacks"]
+        TestSuite --> PreprocTests["2. Preprocessing & Digit Tests:<br/>- Eastern Arabic digits ٠-٩<br/>- Price cleaning & trailing artifact 17.0C<br/>- Weight prefix stripping"]
+        TestSuite --> SpatialTests["3. Spatial Matching Tests:<br/>- Synthetic horizontal alignment<br/>- Arabic RTL leftmost price selection<br/>- Discount & Service charge parsing"]
+        TestSuite --> PipelineTests["4. Full Integration Tests:<br/>- Offline receipt execution<br/>- Null financial field retention"]
+    end
+
+    TestCases --> Assertions["Assertions & Validation:<br/>100% Passing Status (11/11 Passed)"]

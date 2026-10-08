@@ -1,0 +1,18 @@
+%% Diagram 01: System Overview (High-Level End-to-End Flow)
+%% Status: CURRENT
+flowchart TD
+    classDef actorStyle fill:#1e293b,color:#f8fafc,stroke:#3b82f6,stroke-width:2px;
+    classDef engineStyle fill:#0f172a,color:#38bdf8,stroke:#0284c7,stroke-width:2px;
+    classDef procStyle fill:#14532d,color:#86efac,stroke:#22c55e,stroke-width:2px;
+    classDef aiStyle fill:#4c1d95,color:#c084fc,stroke:#a855f7,stroke-width:2px;
+    classDef storeStyle fill:#854d0e,color:#fef08a,stroke:#eab308,stroke-width:2px;
+
+    User[User / External System]:::actorStyle -->|Input Image .jpg/.png or JSON| Interface[Receipt Processing API / CLI run.py]:::engineStyle
+    Interface -->|Raw Input File Path| Preproc[Image Preprocessing & Digit Normalization]:::procStyle
+    Preproc -->|Cleaned Image / JSON| OCR[PaddleOCR Engine PP-OCRv5]:::engineStyle
+    OCR -->|Raw Text Boxes & Coordinates| Spatial[Spatial Layout & Reading Order Parser]:::procStyle
+    Spatial -->|Deterministic Structured Receipt| ConfEval[OCR Confidence & Layout Quality Evaluator]:::procStyle
+    ConfEval -->|Valid Spatial Layout| SemanticLLM[Local LLM Semantic Correction qwen2.5:3b]:::aiStyle
+    SemanticLLM -->|Enriched JSON Dict| Validation[Domain Receipt Validator & Category Guard]:::procStyle
+    Validation -->|Final Validated Receipt| Output[Structured Receipt JSON Output Artifact]:::storeStyle
+    Output -->|Expense Reports / API Response| ExternalConsumer[Database / Expense Report Applications]:::storeStyle

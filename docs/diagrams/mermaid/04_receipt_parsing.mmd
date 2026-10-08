@@ -1,0 +1,20 @@
+%% Diagram 04: Receipt Parsing & Financial Field Association
+%% Status: CURRENT
+flowchart TD
+    Layout[ReceiptLayout Grid OcrElements] --> HeaderDet[1. Table Header Detection detect_table_header_y]
+    HeaderDet --> MerchantDet[2. Merchant Extraction extract_merchant_name]
+    MerchantDet --> ItemPairing[3. Item & Price Spatial Line Pairing]
+    
+    ItemPairing --> FinancialFields["4. Financial Breakdown Extraction (Nullable Schema)"]
+    
+    subgraph FinancialBreakdown["Financial Breakdown Schema"]
+        FinancialFields --> Subtotal["subtotal: Optional[float] (NULL if missing)"]
+        FinancialFields --> Discount["discount: Optional[float] (NULL if missing)"]
+        FinancialFields --> Service["service_charge: Optional[float] (NULL if missing)"]
+        FinancialFields --> Tax["tax: Optional[float] (NULL if missing)"]
+        FinancialFields --> Total["total: Optional[float] (NULL if missing)"]
+        FinancialFields --> Currency["currency: Optional[str] (e.g. SAR, EGP, USD)"]
+    end
+
+    FinancialBreakdown --> PaymentDet["5. Payment Info Extraction (Cash / Card)"]
+    PaymentDet --> DomainModel[StructuredReceipt Domain Entity]

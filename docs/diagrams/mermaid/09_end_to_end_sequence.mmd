@@ -1,0 +1,51 @@
+%% Diagram 09: End-to-End Processing Sequence Diagram
+%% Status: CURRENT
+sequenceDiagram
+    autonumber
+    actor User
+    participant CLI as presentation/cli.py
+    participant API as presentation/api.py
+    participant UC as ProcessReceiptUseCase
+    participant OCR as PaddleOcrEngine
+    participant PP as ReceiptPreprocessor
+    participant SP as SpatialLayoutParser
+    participant LLM as OllamaLlmClient
+    participant VAL as ReceiptValidator
+
+    User->>CLI: Run python run.py receipt.jpg
+    CLI->>API: process_receipt(input_path="receipt.jpg", use_llm=True)
+    API->>UC: ProcessReceiptUseCase.execute(input_path="receipt.jpg")
+    
+    rect rgb(30, 41, 59)
+        Note over UC,OCR: 1. OCR Extraction Phase
+        UC->>OCR: extract_text("receipt.jpg", lang="ar")
+        OCR-->>UC: raw_ocr_items [{text, confidence, box}]
+    end
+
+    rect rgb(15, 23, 42)
+        Note over UC,PP: 2. Preprocessing & Normalization Phase
+        UC->>PP: prepare_ocr_elements(raw_ocr_items)
+        PP->>PP: Normalize digits (٠-٩ -> 0-9) & compute centroids
+        PP-->>UC: sorted List[OcrElement]
+    end
+
+    rect rgb(20, 83, 45)
+        Note over UC,SP: 3. Spatial Layout Parsing Phase
+        UC->>SP: parse(prepared_ocr)
+        SP->>SP: Detect table headers, merchant, date/time, totals
+        SP->>SP: Match items & prices (RTL vs LTR spatial pairing)
+        SP-->>UC: parsed_receipt (StructuredReceipt Domain Entity)
+    end
+
+    rect rgb(76, 29, 149)
+        Note over UC,VAL: 4. LLM Enrichment & Validation Phase
+        UC->>LLM: process_semantic_receipt(parsed_receipt)
+        LLM->>LLM: Execute local ollama subprocess qwen2.5:3b
+        LLM-->>UC: raw_llm_json_dict
+        UC->>VAL: validate_receipt_dict(raw_llm_json_dict, original_receipt=parsed_receipt)
+        VAL-->>UC: final_receipt (StructuredReceipt Domain Entity)
+    end
+
+    UC-->>API: final_dict
+    API-->>CLI: final_dict
+    CLI-->>User: Print JSON Output & Save to receipt_output.json

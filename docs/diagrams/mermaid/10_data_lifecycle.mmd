@@ -1,0 +1,10 @@
+%% Diagram 10: Data Lifecycle & Transformation Pipeline
+%% Status: CURRENT
+flowchart TD
+    Stage1["1. Receipt Image File (.jpg / .png)<br/>Raw RGB Image Pixels"] --> Stage2["2. Raw OCR Detections List<br/>Dict: {text: str, confidence: float, box: [[x,y],...]}"]
+    Stage2 --> Stage3["3. Normalized OcrElements List<br/>OcrElement: {text, confidence, center_x, center_y, is_number, contains_arabic}"]
+    Stage3 --> Stage4["4. Initial Parsed Receipt Entity<br/>StructuredReceipt: {merchant, date, items: [ReceiptItem], subtotal, tax, total}"]
+    Stage4 --> Stage5["5. Prompt JSON String<br/>Structured Prompt with ALLOWED_CATEGORIES passed to Ollama"]
+    Stage5 --> Stage6["6. Raw LLM Response Dict<br/>Dict: {merchant, items: [{name, price, category}], total}"]
+    Stage6 --> Stage7["7. Validated Domain Entity<br/>StructuredReceipt: Corrected categories, restored original prices, validated schema"]
+    Stage7 --> Stage8["8. Output JSON Artifact<br/>receipt_output.json formatted JSON file"]

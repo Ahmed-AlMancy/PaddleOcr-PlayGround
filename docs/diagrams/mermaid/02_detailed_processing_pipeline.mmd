@@ -1,0 +1,32 @@
+%% Diagram 02: Detailed Processing Pipeline Technical Data Flow
+%% Status: CURRENT
+flowchart TD
+    subgraph Step1["Step 1: Input & OCR Extraction"]
+        Image[Receipt Image File / JSON] -->|Input Path| OCR_Engine[PaddleOcrEngine PP-OCRv5]
+        OCR_Engine -->|Extract| Raw_Detections[Raw OCR Detections: text, confidence, bounding_box]
+    end
+
+    subgraph Step2["Step 2: Coordinate Normalization & Preprocessing"]
+        Raw_Detections -->|prepare_ocr_elements| Preproc[ReceiptPreprocessor]
+        Preproc -->|Eastern Arabic Translation ٠-٩ -> 0-9| Digits[Normalized Ascii Digits]
+        Preproc -->|Centroid Calculation| Centroid[center_x, center_y]
+        Preproc -->|Top-to-Bottom Sort| OcrElements[List of OcrElement Objects]
+    end
+
+    subgraph Step3["Step 3: Deterministic Spatial Layout Parsing"]
+        OcrElements --> SpatialParser[SpatialLayoutParser.parse]
+        SpatialParser --> Header[Detect Table Header Row Y]
+        SpatialParser --> Merchant[Extract Merchant Name above Table]
+        SpatialParser --> Meta[Extract Receipt No, Date, Time, Currency, Payment Method]
+        SpatialParser --> Totals[Extract Subtotal, Discount, Service Charge, Tax, Total]
+        SpatialParser --> LinePairing[RTL Leftmost vs LTR Rightmost Price-to-Item Pairing]
+        LinePairing --> InitialReceipt[StructuredReceipt Domain Entity]
+    end
+
+    subgraph Step4["Step 4: Semantic LLM Correction & Validation"]
+        InitialReceipt --> LLMClient[OllamaLlmClient qwen2.5:3b]
+        LLMClient -->|Local Subprocess Call| LLM_Response[Raw LLM JSON Dict]
+        LLM_Response --> Validator[ReceiptValidator]
+        Validator -->|Category Mapping & Spatial Fallback Protection| ValidatedReceipt[Validated StructuredReceipt Entity]
+        ValidatedReceipt -->|to_dict| FinalJSON[receipt_output.json File]
+    end

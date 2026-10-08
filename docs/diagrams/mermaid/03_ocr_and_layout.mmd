@@ -1,0 +1,19 @@
+%% Diagram 03: OCR & Spatial Layout Understanding
+%% Status: CURRENT
+flowchart TD
+    subgraph InputStage["1. Raw OCR Detection"]
+        Img[Receipt Image] --> PaddleOCR[PaddleOCR Engine PP-OCRv5]
+        PaddleOCR --> Detections["OCR Detections list:<br/>- text: str<br/>- confidence: float<br/>- box: [[x1,y1],[x2,y2],[x3,y3],[x4,y4]]"]
+    end
+
+    subgraph LayoutStage["2. Spatial Grid Transformation"]
+        Detections --> CentroidMath["Centroid Calculation:<br/>center_x = mean(points_x)<br/>center_y = mean(points_y)"]
+        CentroidMath --> RowClustering["Row Clustering:<br/>y_bucket = center_y // 15"]
+        RowClustering --> ColumnClustering["Column Clustering & Alignment:<br/>Sort items by center_x"]
+        ColumnClustering --> ReadingOrder["Reading Order Sort:<br/>sort(key = lambda x: (x.center_y, x.center_x))"]
+        ReadingOrder --> ReceiptLayout["ReceiptLayout Grid (OcrElements)"]
+    end
+
+    subgraph ExampleGrid["3. Spatial Alignment Representation"]
+        ReceiptLayout --> IllustrativeExample["Illustrative RTL Arabic Layout Grid:<br/>----------------------------------------<br/>ITEM (Far Right)          PRICE (Far Left)<br/>مياه معدنية                    2.00<br/>شطيرة                          5.00<br/>موز                            88.00<br/>----------------------------------------"]
+    end

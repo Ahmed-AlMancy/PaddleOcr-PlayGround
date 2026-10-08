@@ -1,0 +1,24 @@
+%% Diagram 11: Benchmark Runner Architecture & Model Comparison
+%% Status: CURRENT
+flowchart TD
+    Dataset[Receipt Test Dataset receipt.jpg, receipt10.jpg, receipt11.jpg...] --> BenchRunner[Benchmark Runner tests/benchmark_ocr.py]
+
+    subgraph ProductionPipeline["Production Engine: PP-OCRv5 + Spatial Parser"]
+        BenchRunner --> Engine1[PaddleOcrEngine PP-OCRv5]
+        Engine1 --> Spatial1[SpatialLayoutParser + Ollama]
+        Spatial1 --> Results1["Metrics:<br/>- Processing Time (sec)<br/>- RAM Usage (MB)<br/>- OCR Boxes Count<br/>- Items Count & Merchant"]
+    end
+
+    subgraph ExperimentalEngine["Experimental Engine: PP-StructureV3"]
+        BenchRunner --> Engine2[PP-StructureV3 Layout Pipeline]
+        Engine2 --> Results2["CPU pir::ArrayAttribute Bug Exception Logged:<br/>ConvertPirAttribute2RuntimeAttribute error"]
+    end
+
+    Results1 --> OutputArtifacts[Benchmark Artifacts]
+    Results2 --> OutputArtifacts
+
+    subgraph Artifacts["Generated Reports"]
+        OutputArtifacts --> ReportJSON[benchmark_report.json]
+        OutputArtifacts --> ResultJSON[ocr_result.json]
+        OutputArtifacts --> MarkdownReport[ocr_benchmark_report.md]
+    end

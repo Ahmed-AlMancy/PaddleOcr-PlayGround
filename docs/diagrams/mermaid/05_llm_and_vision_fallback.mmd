@@ -1,0 +1,24 @@
+%% Diagram 05: LLM & Vision Fallback Architecture
+%% Status: CURRENT (Text LLM) vs PLANNED (Vision LLM Fallback)
+flowchart TD
+    classDef current fill:#14532d,color:#86efac,stroke:#22c55e,stroke-width:2px;
+    classDef planned fill:#451a03,color:#fdba74,stroke:#f97316,stroke-width:2px,stroke-dasharray: 5 5;
+
+    OCR[PaddleOCR & Spatial Layout Engine]:::current --> Parse[Parsed Spatial Receipt]:::current
+    Parse --> Evaluator[Confidence & Quality Evaluator]:::current
+
+    Evaluator -->|High Confidence / Good Layout| GoodPath{Is Confidence High?}:::current
+    
+    subgraph NormalPath["Normal Execution Path [CURRENT]"]
+        GoodPath -->|YES| TextLLM[Ollama Local Text LLM qwen2.5:3b]:::current
+        TextLLM --> TextValid[ReceiptValidator Category & Typo Normalization]:::current
+        TextValid --> SuccessOutput[Final Validated Structured Receipt]:::current
+    end
+
+    subgraph FallbackPath["Vision AI Fallback Path [PLANNED / FUTURE]"]
+        GoodPath -.->|NO: Low Confidence / Bad Pairing / Image Distortion| VisionTrigger[Vision Fallback Trigger]:::planned
+        VisionTrigger -.-> Reasons["Fallback Reasons:<br/>- Low OCR Confidence (< 0.6)<br/>- Unpaired Orphan Numbers > 3<br/>- Missing Subtotal/Total Math Match<br/>- Severely Distorted / Rotated Image"]:::planned
+        Reasons -.-> VisionLLM[Vision LLM Engine e.g. Qwen2-VL / PaddleOCR-VL]:::planned
+        VisionLLM -.-> VisionValid[ReceiptValidator Schema Enforcement]:::planned
+        VisionValid -.-> SuccessOutput:::current
+    end
