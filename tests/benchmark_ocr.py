@@ -30,14 +30,15 @@ def get_memory_mb() -> float:
     return process.memory_info().rss / (1024 * 1024)
 
 
-def benchmark_current_pipeline(image_path: str) -> Dict[str, Any]:
+def benchmark_current_pipeline(image_path: str, output_dir: str = "data/outputs") -> Dict[str, Any]:
     use_case = ProcessReceiptUseCase()
+    os.makedirs(output_dir, exist_ok=True)
     
     start_time = time.time()
     mem_before = get_memory_mb()
     
     base_name = os.path.splitext(os.path.basename(image_path))[0]
-    per_image_output = f"{base_name}_output.json"
+    per_image_output = os.path.join(output_dir, f"{base_name}_output.json")
     
     # Execute full pipeline with LLM categorization
     final_dict = use_case.execute(
@@ -46,8 +47,9 @@ def benchmark_current_pipeline(image_path: str) -> Dict[str, Any]:
         use_llm=True
     )
     
-    # Also save copy to ocr_result.json and receipt_output.json
-    for out_file in ["ocr_result.json", "receipt_output.json"]:
+    # Also save copy to ocr_result.json and receipt_output.json in outputs dir
+    for out_filename in ["ocr_result.json", "receipt_output.json"]:
+        out_file = os.path.join(output_dir, out_filename)
         with open(out_file, "w", encoding="utf-8") as f:
             json.dump(final_dict, f, ensure_ascii=False, indent=2)
 
@@ -105,7 +107,12 @@ def benchmark_ppstructurev3(image_path: str, struct_engine) -> Dict[str, Any]:
 
 
 def run_full_benchmark():
-    images = sorted(glob.glob("receipt*.jpg") + glob.glob("receipt*.png"))
+    output_dir = "data/outputs"
+    os.makedirs(output_dir, exist_ok=True)
+    images = sorted(
+        glob.glob("data/images/receipt*.jpg") + glob.glob("data/images/receipt*.png") +
+        glob.glob("receipt*.jpg") + glob.glob("receipt*.png")
+    )
     print(f"\nFound {len(images)} receipt test images: {[os.path.basename(img) for img in images]}\n")
     
     current_results = []
@@ -115,7 +122,7 @@ def run_full_benchmark():
     
     for img in images:
         print(f"Running Current Pipeline on: {img}...")
-        res = benchmark_current_pipeline(img)
+        res = benchmark_current_pipeline(img, output_dir=output_dir)
         current_results.append(res)
         print(f"   -> Items Extracted: {res['items_count']}, Total: {res['total']}, Time: {res['processing_time_sec']}s")
     
@@ -149,11 +156,12 @@ def run_full_benchmark():
         "ppstructurev3_results": ppstruct_results,
     }
     
-    with open("benchmark_report.json", "w", encoding="utf-8") as f:
+    report_file = os.path.join(output_dir, "benchmark_report.json")
+    with open(report_file, "w", encoding="utf-8") as f:
         json.dump(benchmark_report, f, ensure_ascii=False, indent=2)
         
     print("\n" + "=" * 70)
-    print("BENCHMARK COMPLETED. Report saved to benchmark_report.json")
+    print(f"BENCHMARK COMPLETED. Report saved to {report_file}")
     print("=" * 70)
 
 

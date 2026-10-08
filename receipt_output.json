@@ -1,127 +1,22 @@
 {
-  "merchant": "كارفور",
+  "merchant": "Othaim Markets",
   "receipt_number": null,
-  "date": "2024-02-15",
-  "time": "14:32",
+  "date": "09/11/2026",
+  "time": "2:3031 PM",
   "currency": null,
-  "payment_method": "CARD",
+  "payment_method": "CASH",
   "items": [
     {
-      "original_ocr": "Carrefour",
-      "name": "Carrefour",
-      "price": null,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "كارفور سيتي سنتر",
-      "name": "كارفور سيتي سنتر",
-      "price": null,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "القاهرة الجديدة",
-      "name": "القاهرة الجديدة",
-      "price": null,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "مرجبا بكم",
-      "name": "مرجبا بكم",
-      "price": null,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "الرقمالضريبي",
-      "name": "الرقمالضريبي",
-      "price": null,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "1 / موز",
-      "name": "موز",
-      "price": 20.95,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "1 / تفاح أحمر",
-      "name": "تفاح أحمر",
-      "price": 28.5,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "1 / لبن جهينة",
-      "name": "لبن جهينة",
-      "price": 27.75,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "1 / خبز بلدي",
-      "name": "خبز بلدي",
-      "price": 5.0,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "1 / بيض أبيض",
-      "name": "بيض أبيض",
-      "price": 32.25,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "1 / مكرونة المائدة",
-      "name": "مكرونة المائدة",
-      "price": 14.5,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "1 / زيت ذرة",
-      "name": "زيت ذرة",
-      "price": 58.95,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "1 / سكر",
-      "name": "سكر",
-      "price": 12.5,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "1 / شاي لببتون",
-      "name": "شاي لببتون",
-      "price": 21.75,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "1 / مناديل فاين",
-      "name": "مناديل فاين",
-      "price": 24.5,
-      "category": "Groceries",
-      "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "1 / بطاطس مجمزة",
-      "name": "بطاطس مجمزة",
-      "price": 18.75,
+      "original_ocr": "طرشي بوليف تركي وزن",
+      "name": "خبز بوليفاري وزن",
+      "price": 25.5,
       "category": "Groceries",
       "correction_confidence": 1.0
     }
   ],
-  "subtotal": 246.65,
-  "discount": 0.0,
+  "subtotal": null,
+  "discount": null,
   "service_charge": null,
   "tax": null,
-  "total": 246.65
+  "total": 25.5
 }
