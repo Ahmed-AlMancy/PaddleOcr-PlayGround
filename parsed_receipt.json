@@ -1,0 +1,49 @@
+{
+  "merchant": null,
+  "receipt_number": "0003",
+  "date": "08/11/2011",
+  "time": "08:32",
+  "currency": null,
+  "items": [
+    {
+      "name": "مياه معدنية",
+      "raw_ocr_name": "مياه معدنية",
+      "ocr_confidence": 0.936,
+      "price": 2.0,
+      "price_ocr_confidence": 0.9979
+    },
+    {
+      "name": "شطيرة",
+      "raw_ocr_name": "شطيرة",
+      "ocr_confidence": 0.9966,
+      "price": 5.0,
+      "price_ocr_confidence": 0.9998
+    },
+    {
+      "name": "موز",
+      "raw_ocr_name": "موز",
+      "ocr_confidence": 0.8247,
+      "price": 88.0,
+      "price_ocr_confidence": 0.9989
+    },
+    {
+      "name": "تفادة",
+      "raw_ocr_name": "تفادة",
+      "ocr_confidence": 0.9065,
+      "price": 111.0,
+      "price_ocr_confidence": 0.842
+    },
+    {
+      "name": "حليب",
+      "raw_ocr_name": "حليب",
+      "ocr_confidence": 0.8543,
+      "price": 222.0,
+      "price_ocr_confidence": 0.9713
+    }
+  ],
+  "subtotal": 428.0,
+  "discount": null,
+  "tax": null,
+  "total": 428.0,
+  "payment_method": "CASH"
+}

@@ -1,0 +1,99 @@
+{
+  "merchant": "TURKISH CORNER",
+  "receipt_number": null,
+  "date": "6/10/2019",
+  "time": "6:56 PM",
+  "currency": null,
+  "payment_method": "CASH",
+  "items": [
+    {
+      "original_ocr": "-1Homus / حعص",
+      "name": "Homus / حمص",
+      "price": null,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1-Mutabel / عتبل",
+      "name": "Mutabel / عتبل",
+      "price": null,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1-Baba Ghanouj / بابا غنوج",
+      "name": "Baba Ghanouj / بابا غنوج",
+      "price": null,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1-Fatoush / فتوش",
+      "name": "Fatoush / فتوش",
+      "price": null,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1-Olive Salad / سلطة زيتون",
+      "name": "Olive Salad / سلطة زيتون",
+      "price": null,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1-Green Salad / سلطة خصراء",
+      "name": "Green Salad / سلطة خصراء",
+      "price": null,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1-Grapes Leaves / ورق عنب",
+      "name": "Grapes Leaves / ورق عنب",
+      "price": null,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1-Tabouleh / تبولة",
+      "name": "Tabouleh / تبولة",
+      "price": null,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1-Vegetable / with / Youghurt",
+      "name": "Vegetable / with / Youghurt",
+      "price": null,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "Salad / سلطة خضار باللبن",
+      "name": "Salad / سلطة خضار باللبن",
+      "price": null,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1-Hot Salad / سلطة حارة",
+      "name": "Hot Salad / سلطة حارة",
+      "price": null,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "sssssssssesssaseesssssssssua",
+      "name": "sssssssssesssaseesssssssssua",
+      "price": null,
+      "category": "Other",
+      "correction_confidence": 0.0
+    }
+  ],
+  "subtotal": 8.0,
+  "discount": null,
+  "service_charge": null,
+  "tax": null,
+  "total": null
+}

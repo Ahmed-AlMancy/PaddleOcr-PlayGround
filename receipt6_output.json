@@ -1,0 +1,64 @@
+{
+  "merchant": null,
+  "receipt_number": null,
+  "date": "21/03/2019",
+  "time": "09:11",
+  "currency": null,
+  "payment_method": null,
+  "items": [
+    {
+      "original_ocr": "1 / X / طبق تحابيش",
+      "name": "طبق تحابيش",
+      "price": 17.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1 / X / مخلل",
+      "name": "مخلل",
+      "price": 10.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1 / X / طعية أرابيات",
+      "name": "طعية أرابيات",
+      "price": 14.5,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1 / X / فول ارابياتا زيت حار",
+      "name": "فول ارابيات زيت حار",
+      "price": 15.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1 / X / شوربة عدس",
+      "name": "شوربة عدس",
+      "price": 19.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "2 / X / اكترا برتقال",
+      "name": "اكترا برتقال",
+      "price": 32.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "1 / X / طبق طعمية اساطى",
+      "name": "طبق طعمية اساطي",
+      "price": 14.5,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    }
+  ],
+  "subtotal": null,
+  "discount": null,
+  "service_charge": 14.64,
+  "tax": 19.13,
+  "total": 155.77
+}

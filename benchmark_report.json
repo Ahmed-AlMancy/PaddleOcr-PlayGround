@@ -1,0 +1,253 @@
+{
+  "summary": {
+    "images_count": 7,
+    "current_pipeline_avg_time_sec": 30.047,
+    "ppstructurev3_available": true
+  },
+  "current_pipeline_results": [
+    {
+      "engine": "Current PaddleOCR (v3.7.0)",
+      "image": "receipt.jpg",
+      "processing_time_sec": 18.666,
+      "ram_usage_mb": 269.05,
+      "merchant": "RECEIPT",
+      "items_count": 4,
+      "items_sample": [
+        {
+          "name": "Lorem",
+          "price": 14.99
+        },
+        {
+          "name": "Dolor Sit Amet",
+          "price": 8.99
+        },
+        {
+          "name": "Consectetuer",
+          "price": 4.49
+        },
+        {
+          "name": "Adipiscing Eli",
+          "price": 6.99
+        }
+      ],
+      "subtotal": 35.46,
+      "total": null
+    },
+    {
+      "engine": "Current PaddleOCR (v3.7.0)",
+      "image": "receipt10.jpg",
+      "processing_time_sec": 51.418,
+      "ram_usage_mb": 13.67,
+      "merchant": "Dawvero Cafe DAIVERO",
+      "items_count": 8,
+      "items_sample": [
+        {
+          "name": "مولدتن كيك ايس كريم",
+          "price": 105.0
+        },
+        {
+          "name": "ألب منك تشيك",
+          "price": 105.0
+        },
+        {
+          "name": "ألب منك تشيك",
+          "price": 105.0
+        },
+        {
+          "name": "أيس ميكاتو كراميل",
+          "price": 92.0
+        },
+        {
+          "name": "أيس كريم",
+          "price": 95.0
+        }
+      ],
+      "subtotal": 972.0,
+      "total": 1224.72
+    },
+    {
+      "engine": "Current PaddleOCR (v3.7.0)",
+      "image": "receipt11.jpg",
+      "processing_time_sec": 38.631,
+      "ram_usage_mb": 1.67,
+      "merchant": "Othaim Markets",
+      "items_count": 1,
+      "items_sample": [
+        {
+          "name": "خبز بويف وزن",
+          "price": 25.5
+        }
+      ],
+      "subtotal": null,
+      "total": 25.5
+    },
+    {
+      "engine": "Current PaddleOCR (v3.7.0)",
+      "image": "receipt2.png",
+      "processing_time_sec": 28.772,
+      "ram_usage_mb": 5.34,
+      "merchant": "TURKISH CORNER",
+      "items_count": 12,
+      "items_sample": [
+        {
+          "name": "Homus / حمص",
+          "price": null
+        },
+        {
+          "name": "Mutabel / عتبل",
+          "price": null
+        },
+        {
+          "name": "Baba Ghanouj / بابا غنوج",
+          "price": null
+        },
+        {
+          "name": "Fatoush / فتوش",
+          "price": null
+        },
+        {
+          "name": "Olive Salad / سلطة زيتون",
+          "price": null
+        }
+      ],
+      "subtotal": 8.0,
+      "total": null
+    },
+    {
+      "engine": "Current PaddleOCR (v3.7.0)",
+      "image": "receipt3.jpg",
+      "processing_time_sec": 17.972,
+      "ram_usage_mb": -6.56,
+      "merchant": null,
+      "items_count": 5,
+      "items_sample": [
+        {
+          "name": "مياه معدنية",
+          "price": 2.0
+        },
+        {
+          "name": "شطيرة",
+          "price": 5.0
+        },
+        {
+          "name": "موز",
+          "price": 88.0
+        },
+        {
+          "name": "تفاحة",
+          "price": 111.0
+        },
+        {
+          "name": "حليب",
+          "price": 222.0
+        }
+      ],
+      "subtotal": 428.0,
+      "total": 428.0
+    },
+    {
+      "engine": "Current PaddleOCR (v3.7.0)",
+      "image": "receipt4.png",
+      "processing_time_sec": 26.783,
+      "ram_usage_mb": 5.16,
+      "merchant": "Technaureus Info Solutions",
+      "items_count": 4,
+      "items_sample": [
+        {
+          "name": "Black Grapes / العنب الأسود",
+          "price": 9.6
+        },
+        {
+          "name": "Onions / بصل",
+          "price": 1.28
+        },
+        {
+          "name": "Carrots",
+          "price": 3.0
+        },
+        {
+          "name": "جزر",
+          "price": null
+        }
+      ],
+      "subtotal": 13.58,
+      "total": 13.64
+    },
+    {
+      "engine": "Current PaddleOCR (v3.7.0)",
+      "image": "receipt6.jpg",
+      "processing_time_sec": 28.085,
+      "ram_usage_mb": 3.37,
+      "merchant": null,
+      "items_count": 7,
+      "items_sample": [
+        {
+          "name": "طبق تحابيش",
+          "price": 17.0
+        },
+        {
+          "name": "مخلل",
+          "price": 10.0
+        },
+        {
+          "name": "طعية أرابيات",
+          "price": 14.5
+        },
+        {
+          "name": "فول ارابيات زيت حار",
+          "price": 15.0
+        },
+        {
+          "name": "شوربة عدس",
+          "price": 19.0
+        }
+      ],
+      "subtotal": null,
+      "total": 155.77
+    }
+  ],
+  "ppstructurev3_results": [
+    {
+      "engine": "PP-StructureV3",
+      "image": "receipt.jpg",
+      "processing_time_sec": 1.509,
+      "status": "Error: (Unimplemented) ConvertPirAttribute2RuntimeAttribute not support [pir::ArrayAttribute<pir::DoubleAttribute>]  (at ..\\paddle\\fluid\\framework\\new_executor\\instruction\\onednn\\onednn_instruction.cc:118)\n"
+    },
+    {
+      "engine": "PP-StructureV3",
+      "image": "receipt10.jpg",
+      "processing_time_sec": 1.435,
+      "status": "Error: (Unimplemented) ConvertPirAttribute2RuntimeAttribute not support [pir::ArrayAttribute<pir::DoubleAttribute>]  (at ..\\paddle\\fluid\\framework\\new_executor\\instruction\\onednn\\onednn_instruction.cc:118)\n"
+    },
+    {
+      "engine": "PP-StructureV3",
+      "image": "receipt11.jpg",
+      "processing_time_sec": 1.415,
+      "status": "Error: (Unimplemented) ConvertPirAttribute2RuntimeAttribute not support [pir::ArrayAttribute<pir::DoubleAttribute>]  (at ..\\paddle\\fluid\\framework\\new_executor\\instruction\\onednn\\onednn_instruction.cc:118)\n"
+    },
+    {
+      "engine": "PP-StructureV3",
+      "image": "receipt2.png",
+      "processing_time_sec": 1.291,
+      "status": "Error: (Unimplemented) ConvertPirAttribute2RuntimeAttribute not support [pir::ArrayAttribute<pir::DoubleAttribute>]  (at ..\\paddle\\fluid\\framework\\new_executor\\instruction\\onednn\\onednn_instruction.cc:118)\n"
+    },
+    {
+      "engine": "PP-StructureV3",
+      "image": "receipt3.jpg",
+      "processing_time_sec": 1.294,
+      "status": "Error: (Unimplemented) ConvertPirAttribute2RuntimeAttribute not support [pir::ArrayAttribute<pir::DoubleAttribute>]  (at ..\\paddle\\fluid\\framework\\new_executor\\instruction\\onednn\\onednn_instruction.cc:118)\n"
+    },
+    {
+      "engine": "PP-StructureV3",
+      "image": "receipt4.png",
+      "processing_time_sec": 1.254,
+      "status": "Error: (Unimplemented) ConvertPirAttribute2RuntimeAttribute not support [pir::ArrayAttribute<pir::DoubleAttribute>]  (at ..\\paddle\\fluid\\framework\\new_executor\\instruction\\onednn\\onednn_instruction.cc:118)\n"
+    },
+    {
+      "engine": "PP-StructureV3",
+      "image": "receipt6.jpg",
+      "processing_time_sec": 1.377,
+      "status": "Error: (Unimplemented) ConvertPirAttribute2RuntimeAttribute not support [pir::ArrayAttribute<pir::DoubleAttribute>]  (at ..\\paddle\\fluid\\framework\\new_executor\\instruction\\onednn\\onednn_instruction.cc:118)\n"
+    }
+  ]
+}

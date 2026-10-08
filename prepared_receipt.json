@@ -1,0 +1,704 @@
+[
+  {
+    "text": "YOUR RECEIPT",
+    "confidence": 0.999,
+    "center_x": 209.5,
+    "center_y": 53.75,
+    "is_number": false,
+    "contains_arabic": false,
+    "box": [
+      [
+        156,
+        40
+      ],
+      [
+        261,
+        36
+      ],
+      [
+        263,
+        67
+      ],
+      [
+        158,
+        72
+      ]
+    ]
+  },
+  {
+    "text": "RECEIPT NO",
+    "confidence": 0.9978,
+    "center_x": 284.75,
+    "center_y": 73.5,
+    "is_number": false,
+    "contains_arabic": false,
+    "box": [
+      [
+        238,
+        66
+      ],
+      [
+        330,
+        60
+      ],
+      [
+        332,
+        81
+      ],
+      [
+        239,
+        87
+      ]
+    ]
+  },
+  {
+    "text": "0003",
+    "confidence": 0.9982,
+    "center_x": 77.0,
+    "center_y": 86.0,
+    "is_number": true,
+    "contains_arabic": false,
+    "box": [
+      [
+        57,
+        77
+      ],
+      [
+        96,
+        75
+      ],
+      [
+        97,
+        95
+      ],
+      [
+        58,
+        97
+      ]
+    ]
+  },
+  {
+    "text": "Clerk: Supervisor",
+    "confidence": 0.9976,
+    "center_x": 256.0,
+    "center_y": 94.75,
+    "is_number": false,
+    "contains_arabic": false,
+    "box": [
+      [
+        178,
+        88
+      ],
+      [
+        333,
+        81
+      ],
+      [
+        334,
+        101
+      ],
+      [
+        179,
+        109
+      ]
+    ]
+  },
+  {
+    "text": "MachNo:0001",
+    "confidence": 0.9957,
+    "center_x": 109.75,
+    "center_y": 101.5,
+    "is_number": false,
+    "contains_arabic": false,
+    "box": [
+      [
+        61,
+        94
+      ],
+      [
+        157,
+        88
+      ],
+      [
+        158,
+        109
+      ],
+      [
+        63,
+        115
+      ]
+    ]
+  },
+  {
+    "text": "مياه معدنية",
+    "confidence": 0.936,
+    "center_x": 283.25,
+    "center_y": 113.5,
+    "is_number": false,
+    "contains_arabic": true,
+    "box": [
+      [
+        232,
+        106
+      ],
+      [
+        333,
+        100
+      ],
+      [
+        335,
+        121
+      ],
+      [
+        233,
+        127
+      ]
+    ]
+  },
+  {
+    "text": "2.00",
+    "confidence": 0.9979,
+    "center_x": 71.0,
+    "center_y": 124.5,
+    "is_number": true,
+    "contains_arabic": false,
+    "box": [
+      [
+        51,
+        113
+      ],
+      [
+        91,
+        113
+      ],
+      [
+        91,
+        136
+      ],
+      [
+        51,
+        136
+      ]
+    ]
+  },
+  {
+    "text": "شطيرة",
+    "confidence": 0.9966,
+    "center_x": 311.5,
+    "center_y": 134.0,
+    "is_number": false,
+    "contains_arabic": true,
+    "box": [
+      [
+        285,
+        123
+      ],
+      [
+        336,
+        119
+      ],
+      [
+        338,
+        145
+      ],
+      [
+        287,
+        149
+      ]
+    ]
+  },
+  {
+    "text": "5.00",
+    "confidence": 0.9998,
+    "center_x": 68.75,
+    "center_y": 144.5,
+    "is_number": true,
+    "contains_arabic": false,
+    "box": [
+      [
+        47,
+        134
+      ],
+      [
+        89,
+        131
+      ],
+      [
+        90,
+        155
+      ],
+      [
+        49,
+        158
+      ]
+    ]
+  },
+  {
+    "text": "موز",
+    "confidence": 0.8247,
+    "center_x": 321.0,
+    "center_y": 159.5,
+    "is_number": false,
+    "contains_arabic": true,
+    "box": [
+      [
+        304,
+        147
+      ],
+      [
+        338,
+        147
+      ],
+      [
+        338,
+        172
+      ],
+      [
+        304,
+        172
+      ]
+    ]
+  },
+  {
+    "text": "88.00",
+    "confidence": 0.9989,
+    "center_x": 70.25,
+    "center_y": 166.5,
+    "is_number": true,
+    "contains_arabic": false,
+    "box": [
+      [
+        44,
+        155
+      ],
+      [
+        95,
+        152
+      ],
+      [
+        96,
+        178
+      ],
+      [
+        46,
+        181
+      ]
+    ]
+  },
+  {
+    "text": "تفادة",
+    "confidence": 0.9065,
+    "center_x": 313.75,
+    "center_y": 181.0,
+    "is_number": false,
+    "contains_arabic": true,
+    "box": [
+      [
+        288,
+        171
+      ],
+      [
+        338,
+        168
+      ],
+      [
+        340,
+        191
+      ],
+      [
+        289,
+        194
+      ]
+    ]
+  },
+  {
+    "text": "111.00",
+    "confidence": 0.842,
+    "center_x": 73.5,
+    "center_y": 190.5,
+    "is_number": true,
+    "contains_arabic": false,
+    "box": [
+      [
+        45,
+        178
+      ],
+      [
+        102,
+        178
+      ],
+      [
+        102,
+        203
+      ],
+      [
+        45,
+        203
+      ]
+    ]
+  },
+  {
+    "text": "حليب",
+    "confidence": 0.8543,
+    "center_x": 319.5,
+    "center_y": 206.5,
+    "is_number": false,
+    "contains_arabic": true,
+    "box": [
+      [
+        296,
+        194
+      ],
+      [
+        341,
+        191
+      ],
+      [
+        343,
+        219
+      ],
+      [
+        298,
+        222
+      ]
+    ]
+  },
+  {
+    "text": "222.00",
+    "confidence": 0.9713,
+    "center_x": 71.0,
+    "center_y": 213.5,
+    "is_number": true,
+    "contains_arabic": false,
+    "box": [
+      [
+        41,
+        202
+      ],
+      [
+        100,
+        199
+      ],
+      [
+        101,
+        225
+      ],
+      [
+        42,
+        228
+      ]
+    ]
+  },
+  {
+    "text": "Subtotal",
+    "confidence": 0.9989,
+    "center_x": 301.5,
+    "center_y": 232.5,
+    "is_number": false,
+    "contains_arabic": false,
+    "box": [
+      [
+        260,
+        220
+      ],
+      [
+        342,
+        217
+      ],
+      [
+        343,
+        245
+      ],
+      [
+        261,
+        248
+      ]
+    ]
+  },
+  {
+    "text": "428.00",
+    "confidence": 0.9989,
+    "center_x": 69.0,
+    "center_y": 238.0,
+    "is_number": true,
+    "contains_arabic": false,
+    "box": [
+      [
+        39,
+        225
+      ],
+      [
+        99,
+        225
+      ],
+      [
+        99,
+        251
+      ],
+      [
+        39,
+        251
+      ]
+    ]
+  },
+  {
+    "text": "Item",
+    "confidence": 0.9991,
+    "center_x": 325.5,
+    "center_y": 283.5,
+    "is_number": false,
+    "contains_arabic": false,
+    "box": [
+      [
+        302,
+        270
+      ],
+      [
+        349,
+        270
+      ],
+      [
+        349,
+        297
+      ],
+      [
+        302,
+        297
+      ]
+    ]
+  },
+  {
+    "text": "5",
+    "confidence": 0.9993,
+    "center_x": 78.5,
+    "center_y": 288.0,
+    "is_number": true,
+    "contains_arabic": false,
+    "box": [
+      [
+        70,
+        276
+      ],
+      [
+        87,
+        276
+      ],
+      [
+        87,
+        300
+      ],
+      [
+        70,
+        300
+      ]
+    ]
+  },
+  {
+    "text": "TOTAL",
+    "confidence": 0.9983,
+    "center_x": 295.75,
+    "center_y": 310.75,
+    "is_number": false,
+    "contains_arabic": false,
+    "box": [
+      [
+        243,
+        298
+      ],
+      [
+        348,
+        295
+      ],
+      [
+        348,
+        324
+      ],
+      [
+        244,
+        326
+      ]
+    ]
+  },
+  {
+    "text": "428.00",
+    "confidence": 0.9976,
+    "center_x": 100.5,
+    "center_y": 314.0,
+    "is_number": true,
+    "contains_arabic": false,
+    "box": [
+      [
+        42,
+        300
+      ],
+      [
+        159,
+        300
+      ],
+      [
+        159,
+        328
+      ],
+      [
+        42,
+        328
+      ]
+    ]
+  },
+  {
+    "text": "CASH",
+    "confidence": 0.9903,
+    "center_x": 329.0,
+    "center_y": 339.0,
+    "is_number": false,
+    "contains_arabic": false,
+    "box": [
+      [
+        305,
+        325
+      ],
+      [
+        353,
+        325
+      ],
+      [
+        353,
+        353
+      ],
+      [
+        305,
+        353
+      ]
+    ]
+  },
+  {
+    "text": "428.00",
+    "confidence": 0.9993,
+    "center_x": 61.0,
+    "center_y": 342.0,
+    "is_number": true,
+    "contains_arabic": false,
+    "box": [
+      [
+        30,
+        329
+      ],
+      [
+        92,
+        329
+      ],
+      [
+        92,
+        355
+      ],
+      [
+        30,
+        355
+      ]
+    ]
+  },
+  {
+    "text": "Tue.",
+    "confidence": 0.9834,
+    "center_x": 330.0,
+    "center_y": 367.5,
+    "is_number": false,
+    "contains_arabic": false,
+    "box": [
+      [
+        306,
+        354
+      ],
+      [
+        354,
+        354
+      ],
+      [
+        354,
+        381
+      ],
+      [
+        306,
+        381
+      ]
+    ]
+  },
+  {
+    "text": "08:32 08/11/2011",
+    "confidence": 0.9972,
+    "center_x": 196.75,
+    "center_y": 369.0,
+    "is_number": false,
+    "contains_arabic": false,
+    "box": [
+      [
+        112,
+        355
+      ],
+      [
+        281,
+        353
+      ],
+      [
+        282,
+        383
+      ],
+      [
+        112,
+        385
+      ]
+    ]
+  },
+  {
+    "text": "*0001",
+    "confidence": 0.9495,
+    "center_x": 62.0,
+    "center_y": 369.5,
+    "is_number": false,
+    "contains_arabic": false,
+    "box": [
+      [
+        35,
+        356
+      ],
+      [
+        89,
+        356
+      ],
+      [
+        89,
+        383
+      ],
+      [
+        35,
+        383
+      ]
+    ]
+  },
+  {
+    "text": "*THANK YOU*",
+    "confidence": 0.961,
+    "center_x": 221.5,
+    "center_y": 398.5,
+    "is_number": false,
+    "contains_arabic": false,
+    "box": [
+      [
+        160,
+        385
+      ],
+      [
+        282,
+        383
+      ],
+      [
+        283,
+        412
+      ],
+      [
+        161,
+        414
+      ]
+    ]
+  }
+]

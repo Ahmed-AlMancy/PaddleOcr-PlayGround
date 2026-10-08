@@ -1,0 +1,43 @@
+{
+  "merchant": "Technaureus Info Solutions",
+  "receipt_number": null,
+  "date": "02/16/2018",
+  "time": "15:38:29",
+  "currency": "SAR",
+  "payment_method": "CASH",
+  "items": [
+    {
+      "original_ocr": "Black Grapes / العنب الأسود",
+      "name": "Black Grapes / العنب الأسود",
+      "price": 9.6,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "Onions / بصل",
+      "name": "Onions / بصل",
+      "price": 1.28,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "Carrots",
+      "name": "Carrots",
+      "price": 3.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "جزر",
+      "name": "جزر",
+      "price": null,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    }
+  ],
+  "subtotal": 13.58,
+  "discount": null,
+  "service_charge": null,
+  "tax": 0.06,
+  "total": 13.64
+}

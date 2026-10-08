@@ -1,0 +1,71 @@
+{
+  "merchant": "Dawvero Cafe DAIVERO",
+  "receipt_number": null,
+  "date": "23/06/2026",
+  "time": "12:18:03AM",
+  "currency": null,
+  "payment_method": null,
+  "items": [
+    {
+      "original_ocr": "مولتن كيك ايس كريم / 1",
+      "name": "مولدتن كيك ايس كريم",
+      "price": 105.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "ميلك تشيك / 2",
+      "name": "ألب منك تشيك",
+      "price": 105.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "ميلك تشيك / T",
+      "name": "ألب منك تشيك",
+      "price": 105.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "ايس ميكاتو كراميل / 4",
+      "name": "أيس ميكاتو كراميل",
+      "price": 92.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "ايس كريم / 2",
+      "name": "أيس كريم",
+      "price": 95.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "ايس كريم / 4",
+      "name": "أيس كريم",
+      "price": 95.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "ايس كريم / F",
+      "name": "أيس كريم",
+      "price": 95.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "قهوة بندق دبل / T",
+      "name": "قهوة بندق دبل",
+      "price": 80.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    }
+  ],
+  "subtotal": 972.0,
+  "discount": 0.0,
+  "service_charge": 116.64,
+  "tax": 136.08,
+  "total": 1224.72
+}

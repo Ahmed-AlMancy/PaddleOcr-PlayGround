@@ -1,0 +1,50 @@
+{
+  "merchant": null,
+  "receipt_number": null,
+  "date": "08/11/2011",
+  "time": "08:32",
+  "currency": null,
+  "payment_method": "CASH",
+  "items": [
+    {
+      "original_ocr": "مياه معدنية",
+      "name": "مياه معدنية",
+      "price": 2.0,
+      "category": "Other",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "شطيرة",
+      "name": "شطيرة",
+      "price": 5.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "موز",
+      "name": "موز",
+      "price": 88.0,
+      "category": "Other",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "تفادة",
+      "name": "تفاحة",
+      "price": 111.0,
+      "category": "Other",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "حليب",
+      "name": "حليب",
+      "price": 222.0,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    }
+  ],
+  "subtotal": 428.0,
+  "discount": null,
+  "service_charge": null,
+  "tax": null,
+  "total": 428.0
+}
