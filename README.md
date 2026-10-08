@@ -41,7 +41,7 @@ receipt-test/
 
 ### 1. Run Pipeline on Sample Image
 ```bash
-python run.py data/images/receipt11.jpg -o data/outputs/receipt11_output.json
+python run.py data/images/receipt_07.jpg -o data/outputs/receipt_07_output.json
 ```
 
 ### 2. Run Automated Pytest Suite

@@ -82,13 +82,6 @@
       "price": null,
       "category": "Groceries",
       "correction_confidence": 1.0
-    },
-    {
-      "original_ocr": "sssssssssesssaseesssssssssua",
-      "name": "sssssssssesssaseesssssssssua",
-      "price": null,
-      "category": "Other",
-      "correction_confidence": 0.0
     }
   ],
   "subtotal": 8.0,

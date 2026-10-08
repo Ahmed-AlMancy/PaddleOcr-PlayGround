@@ -1,0 +1,43 @@
+{
+  "merchant": "RECEIPT",
+  "receipt_number": null,
+  "date": null,
+  "time": null,
+  "currency": "USD",
+  "payment_method": "CARD",
+  "items": [
+    {
+      "original_ocr": "Lorem ipsum",
+      "name": "Lorem ipsum",
+      "price": 14.99,
+      "category": "Groceries",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "Dolor Sit Amet",
+      "name": "Dolor sit amet",
+      "price": 8.99,
+      "category": "Clothing",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "Consectetuer",
+      "name": "Consectetuer",
+      "price": 4.49,
+      "category": "Clothing",
+      "correction_confidence": 1.0
+    },
+    {
+      "original_ocr": "Adipiscing Eli",
+      "name": "Adipiscing Eli",
+      "price": 6.99,
+      "category": "Clothing",
+      "correction_confidence": 1.0
+    }
+  ],
+  "subtotal": 35.46,
+  "discount": null,
+  "service_charge": null,
+  "tax": 1.77,
+  "total": null
+}

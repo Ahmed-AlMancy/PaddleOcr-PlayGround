@@ -8,49 +8,49 @@
   "items": [
     {
       "original_ocr": "مولتن كيك ايس كريم / 1",
-      "name": "مولدتن كيك ايس كريم",
+      "name": "مولتن كيك ايس كريم",
       "price": 105.0,
       "category": "Groceries",
       "correction_confidence": 1.0
     },
     {
       "original_ocr": "ميلك تشيك / 2",
-      "name": "ألب منك تشيك",
+      "name": "ميلك تشيك",
       "price": 105.0,
       "category": "Groceries",
       "correction_confidence": 1.0
     },
     {
       "original_ocr": "ميلك تشيك / T",
-      "name": "ألب منك تشيك",
+      "name": "ميلك تشيك",
       "price": 105.0,
       "category": "Groceries",
       "correction_confidence": 1.0
     },
     {
       "original_ocr": "ايس ميكاتو كراميل / 4",
-      "name": "أيس ميكاتو كراميل",
+      "name": "ايس ميكاتو كراميل",
       "price": 92.0,
       "category": "Groceries",
       "correction_confidence": 1.0
     },
     {
       "original_ocr": "ايس كريم / 2",
-      "name": "أيس كريم",
+      "name": "ايس كريم",
       "price": 95.0,
       "category": "Groceries",
       "correction_confidence": 1.0
     },
     {
       "original_ocr": "ايس كريم / 4",
-      "name": "أيس كريم",
+      "name": "ايس كريم",
       "price": 95.0,
       "category": "Groceries",
       "correction_confidence": 1.0
     },
     {
       "original_ocr": "ايس كريم / F",
-      "name": "أيس كريم",
+      "name": "ايس كريم",
       "price": 95.0,
       "category": "Groceries",
       "correction_confidence": 1.0
