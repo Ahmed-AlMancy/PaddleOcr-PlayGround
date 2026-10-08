@@ -14,6 +14,9 @@ ENV/
 .coverage
 htmlcov/
 
+# Local execution root JSON files
+/*.json
+
 # Antigravity & OS files
 .DS_Store
 Thumbs.db

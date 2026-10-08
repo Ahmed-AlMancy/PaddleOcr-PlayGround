@@ -37,25 +37,6 @@ receipt-test/
 
 ---
 
-## 🚀 Quick Start
-
-### 1. Run Pipeline on Sample Image
-```bash
-python run.py data/images/receipt_07.jpg -o data/outputs/receipt_07_output.json
-```
-
-### 2. Run Automated Pytest Suite
-```bash
-python -m pytest
-```
-
-### 3. Run Performance Benchmark
-```bash
-python tests/benchmark_ocr.py
-```
-
----
-
 ## 📖 Architecture & Diagrams
 
 - **High-Level Overview:** See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
